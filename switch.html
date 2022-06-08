@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body>
+    <div
+      class="flex justify-center items-center w-full h-screen dark:bg-gray-900 bg-white transition-colors duration-1000"
+    >
+      <button
+        onclick="togle()"
+        class="w-20 h-10 bg-gray-200 rounded-full absolute"
+      >
+        <div
+          class="h-3/4 w-2/5 bg-yellow-400 dark:bg-gray-900 rounded-full flex justify-center items-center relative left-1 dark:left-11 transition-colors duration-1000"
+        ></div>
+      </button>
+    </div>
+    <script>
+      function togle() {
+        const html = document.querySelector("html");
+        let dark = html.className;
+        if (dark === "dark") {
+          html.classList.remove("dark");
+        } else {
+          html.classList.add("dark");
+        }
+      }
+    </script>
+  </body>
+</html>
